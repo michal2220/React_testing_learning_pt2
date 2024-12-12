@@ -41,7 +41,6 @@ test(" renders two links for each language", async () => {
   //Loop over each language
   const languages = ["javasctipt", "typescript", "rust", "go", "pyton", "java"];
   for (let language of languages) {
-    //For each language, make sure we see two links
     const links = await screen.findAllByRole("link", {
       name: new RegExp(`${language}_`),
     });
